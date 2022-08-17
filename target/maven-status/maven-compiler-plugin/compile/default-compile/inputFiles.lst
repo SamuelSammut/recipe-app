@@ -1,0 +1,8 @@
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/domain/Ingredient.java
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/controllers/IndexController.java
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/domain/Difficulty.java
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/Spring5RecipeAppApplication.java
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/domain/Recipe.java
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/domain/Category.java
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/domain/Notes.java
+/home/samuel/Workspace/spring5-recipe-app/src/main/java/guru/springframework/domain/UnitOfMeasure.java
