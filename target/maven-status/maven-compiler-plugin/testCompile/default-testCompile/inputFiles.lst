@@ -1,1 +1,5 @@
-/home/samuel/Workspace/spring5-recipe-app/src/test/java/guru/springframework/Spring5RecipeAppApplicationTests.java
+/home/samuel/Workspace/recipe-app/src/test/java/guru/springframework/repositories/UnitOfMeasureRepositoryIT.java
+/home/samuel/Workspace/recipe-app/src/test/java/guru/springframework/Spring5RecipeAppApplicationTests.java
+/home/samuel/Workspace/recipe-app/src/test/java/guru/springframework/services/RecipeServiceImplTest.java
+/home/samuel/Workspace/recipe-app/src/test/java/guru/springframework/controllers/IndexControllerTest.java
+/home/samuel/Workspace/recipe-app/src/test/java/guru/springframework/domain/CategoryTest.java
