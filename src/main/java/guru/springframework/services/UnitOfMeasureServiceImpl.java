@@ -14,8 +14,7 @@ public class UnitOfMeasureServiceImpl implements UnitOfMeasureService {
     private final UnitOfMeasureRepository unitOfMeasureRepository;
     private final UnitOfMeasureToUnitOfMeasureCommand unitOfMeasureToUnitOfMeasureCommand;
 
-    public UnitOfMeasureServiceImpl(UnitOfMeasureRepository unitOfMeasureRepository,
-                                    UnitOfMeasureToUnitOfMeasureCommand unitOfMeasureToUnitOfMeasureCommand) {
+    public UnitOfMeasureServiceImpl(UnitOfMeasureRepository unitOfMeasureRepository, UnitOfMeasureToUnitOfMeasureCommand unitOfMeasureToUnitOfMeasureCommand) {
         this.unitOfMeasureRepository = unitOfMeasureRepository;
         this.unitOfMeasureToUnitOfMeasureCommand = unitOfMeasureToUnitOfMeasureCommand;
     }
@@ -23,7 +22,8 @@ public class UnitOfMeasureServiceImpl implements UnitOfMeasureService {
 
 
     @Override
-    public Set<UnitOfMeasureCommand> listAllUnitOfMeasures() {
+    public Set<UnitOfMeasureCommand> listAllUoms() {
+
         return StreamSupport.stream(unitOfMeasureRepository.findAll()
                 .spliterator(), false)
                 .map(unitOfMeasureToUnitOfMeasureCommand::convert)
