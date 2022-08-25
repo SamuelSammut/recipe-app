@@ -56,6 +56,18 @@ public class RecipeServiceImplTest {
         verify(recipeRepository, never()).findAll();
     }
 
+    @Test(expected = NotFoundException.class)
+    public void getRecipeByIdTestNotFound() throws Exception {
+
+        Optional<Recipe> recipeOptional = Optional.empty();
+
+        when(recipeRepository.findById(anyLong())).thenReturn(recipeOptional);
+
+        Recipe recipeReturned = recipeService.findById(1L);
+
+        //should go boom
+    }
+
     @Test
     public void getRecipeCommandByIdTest() throws Exception {
         Recipe recipe = new Recipe();
@@ -83,7 +95,7 @@ public class RecipeServiceImplTest {
         HashSet receipesData = new HashSet();
         receipesData.add(recipe);
 
-        when(recipeRepository.findAll()).thenReturn(receipesData);
+        when(recipeService.getRecipes()).thenReturn(receipesData);
 
         Set<Recipe> recipes = recipeService.getRecipes();
 
@@ -92,23 +104,18 @@ public class RecipeServiceImplTest {
         verify(recipeRepository, never()).findById(anyLong());
     }
 
-    @Test(expected = NotFoundException.class)
-    public void getRecipeByIdTestNotFound() throws Exception{
-        Optional<Recipe> optionalRecipe = Optional.empty();
-        when(recipeRepository.findById(anyLong())).thenReturn(optionalRecipe);
-        Recipe recipeReturned = recipeService.findById(1L);
-        //should go boom
-    }
     @Test
-    public void testDeleteById() throws Exception{
+    public void testDeleteById() throws Exception {
+
         //given
         Long idToDelete = Long.valueOf(2L);
+
+        //when
         recipeService.deleteById(idToDelete);
 
-        //no 'when' since method has void
+        //no 'when', since method has void return type
 
         //then
         verify(recipeRepository, times(1)).deleteById(anyLong());
     }
-
 }
